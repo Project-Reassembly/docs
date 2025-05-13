@@ -1,0 +1,9 @@
+### PAGE DEFINITION FILE ###
+==home;
+  title = Blank Wiki;
+  :welcome\! = [b/This wiki is designed to give up-to-date information on ((project name here)).];
+  (!:warn) = [h:lightred/[i/Wiki is under construction, please be patient]];
+  (:vhwarning) = [i/Version History will not show pre-release information.];
+  (desc) = This is a blank wiki.;
+  versionHistory = null;
+#

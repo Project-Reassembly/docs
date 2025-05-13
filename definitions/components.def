@@ -1,0 +1,17 @@
+### COMPONENT DEFINITION FILE ###
+# page headers
+  unreleased = [.head.ur/[u/Unreleased Content][br]{1}];
+  removed = [.head.rm/[u/Removed Content][br]{1}];
+  recent = [.head.rc/[u/Recently Released][br]{1}];
+  unconfirmed = [.head.uc/[u/Unconfirmed Additions][br]{1}];
+  incomplete = [.head.ic/[u/Incomplete Page][br]{1}];
+  community = [.head.cm/[u/Community Creation][br]{1}];
+  outdated = [.head.in/[u/Outdated Information][br]{1}];
+  technical = [.head.tc/[u/Technical Content][br]{1}];
+# integrate
+  islable = [->integrate as [img/isl]];
+  integratable = [->integrate as [img/integrate]];
+  partintegratable = [->integrate as [img/partial-integrate]];
+  tointegrate = [->integrate as [img/to-integrate]];
+  nonintegratable = [->integrate as [img/not-integrate]];
+#

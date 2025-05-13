@@ -1,0 +1,4 @@
+### NAVIGATION BAR DEFINITION FILE ###
+==Category;
+  Item1 = page-item-1;
+  Item2 = page-item-2;

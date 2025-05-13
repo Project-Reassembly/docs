@@ -1,0 +1,264 @@
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--main-font);
+}
+info-box {
+  float: right;
+  height: 100%;
+}
+main {
+  margin: 5px;
+  padding: 5px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  max-height: calc(100vh - 150px);
+}
+main .desc {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+main .desc * {
+  margin: 10px;
+  background-color: var(--faded-sidebar-colour);
+  padding: 10px;
+  align-self: center;
+  width: 90%;
+  font-size: 125%;
+  text-align: left;
+}
+main .desc .c {
+  text-align: center;
+}
+main .desc h2 {
+  text-align: center;
+  font-size: 175%;
+  width: 95.5%;
+  margin-top: 30px;
+  align-self: normal;
+  background-color: var(--less-faded-sidebar-colour);
+}
+main .desc .warn {
+  color: var(--warning-colour);
+  background-color: var(--warning-background-colour);
+}
+main .desc i,
+main .desc b,
+main .desc a,
+main .desc u,
+main .desc s,
+main .desc span {
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+  display: inline;
+  background-color: transparent;
+}
+main .desc a {
+  /* font-weight: bold; */
+  text-decoration: underline;
+  color: var(--header-colour);
+}
+.unf, .unf * {
+  /* font-weight: bold; */
+  text-decoration: none !important;
+  color: inherit !important;
+  background-color: inherit !important;
+  font-size: inherit !important;
+}
+main .desc a:hover {
+  /* font-weight: bold; */
+  text-decoration: underline;
+  color: var(--lighter-header-colour);
+}
+main .desc img {
+  align-self: center;
+  height: auto;
+  width: 60%;
+}
+main .desc blockquote * {
+  margin: 0;
+}
+main .desc .bq {
+  font-size: 100%;
+  width: 80%;
+  align-self: center;
+  border: 20px double var(--faded-border-colour);
+  padding: 0%;
+}
+main .desc .bq * {
+  font-size: 125%;
+  margin: 0;
+  padding: 6px;
+  padding-top: 0;
+  text-align: right;
+  display: block;
+  width: 90%;
+}
+main .desc .bq :first-child {
+  padding-top: 6px;
+  padding-bottom: 0px;
+}
+main .desc .bq cite::before {
+  content: " ⸺ ";
+}
+main .desc .bq blockquote {
+  padding-left: 6%;
+  font-size: 125%;
+  font-style: italic;
+  text-align: left;
+}
+main .desc .bq blockquote * {
+  text-align: left;
+}
+blockquote *::before {
+  content: "“";
+}
+blockquote *::after {
+  content: "”";
+}
+main .desc .container {
+  text-align: center;
+  width: 70%;
+}
+main .desc .history {
+  margin: 0;
+  font-size: 75%;
+  display: block;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  background-color: var(--hover-bg-colour);
+  text-align: left;
+  max-height: 600px;
+  overflow: auto;
+}
+main .desc .history * {
+  width: calc(100% - 40px);
+  background-color: var(--table-bg-colour);
+}
+main .desc .history ul {
+  list-style: none;
+}
+main .desc .history > ul > li {
+  border-bottom: 2px solid black;
+  margin: 0;
+}
+main .desc .history > ul > li ul li {
+  margin: 0;
+  padding: 0;
+}
+main .desc .history > ul > li ul li::before {
+  content: " - ";
+}
+
+main .desc .history > ul > li ul li:has(.nerf)::before {
+  content: "[-] ";
+  color: red;
+}
+main .desc .history > ul > li ul li:has(.neutral)::before,
+main .desc .history > ul > li ul li:has(.buff.nerf .buff ~ .nerf)::before {
+  content: "[×] ";
+  color: rgb(177, 144, 0);
+}
+main .desc .history > ul > li ul li:has(.buff)::before {
+  content: "[+] ";
+  color: green;
+}
+main .desc .history > ul > li .undoc::before {
+  content: "[Undocumented] ";
+  font-weight: bold;
+}
+main .desc .history > ul > li ul {
+  font-size: 75%;
+}
+i-n {
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 2px 4px !important;
+  background-color: transparent !important;
+  font-size: 1em !important;
+  text-align: center !important;
+  width: fit-content !important;
+  min-width: 1em !important;
+}
+main .desc .head {
+  padding: 20px;
+  border: 10px double black;
+  background-color: darkgray;
+  font-weight: bold;
+  text-align: center;
+}
+main .desc .head * {
+  background-color: inherit;
+  font-weight: inherit;
+  text-align: inherit;
+}
+main .desc .head u {
+  font-size: 120%;
+}
+
+main .desc .head.ur{
+  background-color: lightgreen;
+  border-color: green;
+}
+main .desc .head.rm{
+  background-color: lightcoral;
+  border-color: red;
+}
+main .desc .head.rc{
+  background-color: rgb(255, 255, 114);
+  border-color: gold;
+}
+main .desc .head.uc{
+  background-color: rgb(224, 114, 255);
+  border-color: purple;
+}
+main .desc .head.ic{
+  background-color: #ffc966;
+  border-color: orange;
+}
+main .desc .head.in{
+  background-color: #ff9466;
+  border-color: rgb(255, 111, 0);
+}
+main .desc .head.cm{
+  background-color: #9ef0ff;
+  border-color: cyan;
+}
+main .desc .head.tc{
+  background-color: rgb(183, 183, 255);
+  border-color: blue;
+}
+
+
+main .desc code{
+  font-size: inherit;
+  font-family: 'Consolas', monospace;
+  border: 2px solid rgba(72, 72, 82, 0.6);
+  margin: 0;
+  border-radius: 0.3em;
+  padding: 1px 6px;
+  background-color: rgba(101, 101, 134, 0.3);
+  font-size: 85%;
+}
+
+main .desc kbd {
+  margin: 0;
+  background-color: #eee;
+  border-radius: 0.3em;
+  border: 1px solid #b4b4b4;
+  box-shadow:
+    0 2px 1px rgba(0, 0, 0, 0.3),
+    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  /* display: inline-block; */
+  font-size: 95%;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+}

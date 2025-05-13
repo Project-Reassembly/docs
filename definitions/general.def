@@ -1,0 +1,6 @@
+### GENERIC PROPERTY DEFINITION FILE ###
+# "MOAB Adventure Wiki"
+name = (name here);
+# https://github.com/MOAB-Adventure/wiki/issues/new?template=Blank+issue
+issueUrl = (issue page url here);
+icon = ../generator/default-icon.ico;

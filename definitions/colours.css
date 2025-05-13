@@ -1,0 +1,29 @@
+/* Edit this to change the colour scheme (and font) of the site */
+:root {
+  --accent-colour: #00d5ff;
+  --hover-bg-colour: #a9a9a9;
+  --table-bg-colour: #cacaca;
+  --table-item-colour: #ececec;
+  --main-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --code-font: "Consolas", monospace;
+  --box-width: 500px;
+  --header-size: 40px;
+
+  --sidebar-group-colour: #0065f3;
+  --sidebar-colour: #0053c7;
+  --faded-sidebar-colour: #a5bee3;
+  --less-faded-sidebar-colour: #91b1e1;
+  --warning-colour:  #5c0000;
+  --warning-background-colour:  #e19191;
+  --faded-border-colour: #7587a2;
+  --faded-sidebar-hover-colour: #cbd5e4;
+  --sidebar-top-colour: #00429f;
+  --sidebar-item-colour: #0b67e8;
+  --sidebar-item-hover-colour: #3589ff;
+
+  --header-colour: blue;
+  --lighter-header-colour: rgb(75, 75, 255);
+
+  font-size: large;
+}

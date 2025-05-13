@@ -1,0 +1,10 @@
+[
+  {
+    "_comment": "This file defines search results. Any of the three properties below may be used to match a page.",
+    "title": "Home",
+    "name": "home",
+    "tags": [
+      "wiki"
+    ]
+  }
+]
