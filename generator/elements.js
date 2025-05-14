@@ -336,15 +336,15 @@ class SearchBarElement extends HTMLElement {
   input[type="search"]{
     width: 60%;
     height: 40px;
-    background-color: darkblue;
-    color: white;
+    background-color:  var(--search-bar-colour);
+    color:  var(--search-bar-text-colour);
     font-size: 30px
   }
   button{
     width: 75px;
     height: 40px;
-    background-color: darkblue;
-    color: white;
+    background-color:  var(--search-bar-colour);
+    color:  var(--search-bar-text-colour);
     font-size: 20px;
   }`;
   constructor() {
