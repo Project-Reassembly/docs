@@ -50,8 +50,11 @@ async function constructNavbar() {
 function registerIcons() {
   msg("registering defined icons");
   for(let ico in icons){
+  msg(" registering "+ico);
     let iconurl = icons[ico];
-    IconElement.icons[ico] = iconurl;
+    if(IconElement) IconElement.icons[ico] = iconurl;
+    else msg("  could not add it")
+    msg(IconElement.icons)
   }
 }
 function makeHeaderHTML(name) {
