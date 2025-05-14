@@ -40,7 +40,7 @@ function start() {
   }
   document.getElementById("query").innerText =
     "Page search for: '" + term + "'";
-  document.getElementById("return").href = source;
+  document.getElementById("return").href = "./home.html?goto=" + source;
 }
 
 function createLinkForResult(result) {

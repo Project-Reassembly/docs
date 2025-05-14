@@ -384,7 +384,7 @@ class SearchBarElement extends HTMLElement {
       (window.location.href.includes("search-results.html")
         ? "&source=" +
           encodeURIComponent(document.getElementById("return").href)
-        : "&source=" + encodeURIComponent(window.location.href));
+        : "&source=" + encodeURIComponent(new URLSearchParams(window.location.search).get("page") ?? "home"));
     window.location.href = newrl;
   }
 }

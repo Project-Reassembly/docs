@@ -6,7 +6,7 @@ let components = {};
 let generalInfo = {
   name: "",
   issueUrl: "",
-  icon: ""
+  icon: "",
 };
 function errorPage(
   num = -1,
@@ -259,7 +259,7 @@ function getComponents() {
  * Will only work if > 0 components are defined.
  */
 function isLoaded(win = window) {
-  return win.getComponents() && Object.keys(win.getComponents()).length > 0;
+  return win?.getComponents && Object.keys(win.getComponents()).length > 0;
 }
 async function delay(ms) {
   return new Promise((resolve, reject) => setTimeout(() => resolve(true), ms));
@@ -340,7 +340,7 @@ async function importer(url, type = "unknown") {
       let kp = line.split(" = ");
       if (kp.length > 1) defobj[kp[0]] = kp.slice(1).join(" = ");
     }
-    setLoadState(lines[0], {Type: type, Value: defobj});
+    setLoadState(lines[0], { Type: type, Value: defobj });
     obj[lines[0]] = defobj;
   }
   return obj;
@@ -362,7 +362,7 @@ async function singleLineDefImporter(url, type = "unknown") {
     let kp = line.split(" = ");
     if (kp.length > 1) {
       defsobj[kp[0]] = kp.slice(1).join(" = ");
-      setLoadState(kp[0], {Type: type, Value: defsobj[kp[0]]});
+      setLoadState(kp[0], { Type: type, Value: defsobj[kp[0]] });
     }
   }
   return defsobj;
@@ -370,11 +370,17 @@ async function singleLineDefImporter(url, type = "unknown") {
 
 async function importAll() {
   loaded = false;
-  generalInfo = await singleLineDefImporter("../definitions/general.def", "info");
+  generalInfo = await singleLineDefImporter(
+    "../definitions/general.def",
+    "info"
+  );
   msg("General info loaded.");
   pages = await importer("../definitions/pages.def", "page");
   msg("Pages loaded.");
-  components = await singleLineDefImporter("../definitions/components.def", "component");
+  components = await singleLineDefImporter(
+    "../definitions/components.def",
+    "component"
+  );
   msg("Components loaded.");
   icons = await singleLineDefImporter("../definitions/icons.def", "icon");
   msg("Icons loaded.");
