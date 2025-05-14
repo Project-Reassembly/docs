@@ -15,7 +15,7 @@ async function goto(page) {
   msg("Page url is " + location.href);
   loadSelectedPage();
 }
-async function onWeaponLoad() {
+async function onPageLoad() {
   msg("Main page ready.");
   loadSelectedPage();
 }
@@ -27,5 +27,6 @@ function loadSelectedPage() {
     loadIntoMainIframe(destination, document);
   } else {
     loadIntoMainIframe("home");
+    msg("Sending iframe home");
   }
 }

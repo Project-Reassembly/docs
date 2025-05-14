@@ -1,6 +1,5 @@
 addEventListener("DOMContentLoaded", start)
 function start() {
-
   let url = window.location.href
   let search = window.location.search
   let sp = new URLSearchParams(search)

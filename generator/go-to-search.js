@@ -1,6 +1,6 @@
 //Search version of navigator.js
 //Used in the search page
-function onWeaponLoad(){
+function onPageLoad(){
   msg("Iframe ready.")
   loadSelectedPage()
 }
