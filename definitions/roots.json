@@ -1,3 +1,4 @@
 {
-  "_comment": "This file is used to define alternate paths to the index file based on the host name."
+  "_comment": "This file is used to define alternate paths to the index file based on the host name.",
+  "https://project-reassembly.github.io": "/play/"
 }
