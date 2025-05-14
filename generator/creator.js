@@ -31,15 +31,17 @@ function errorPage(
 }
 
 loaded = false;
-importAll().then((x) => start(x));
+importAll().then(x => creatorFinished());
 
-function start() {
+function creator() {
   msg("Content lists loaded.");
   loaded = true;
   try {
     msg("Loading pages...");
-    onWeaponLoad();
-  } catch (e) {}
+    onPageLoad();
+  } catch (e) {
+    msg("Error!",e);
+  }
 }
 
 const bracketRegex =

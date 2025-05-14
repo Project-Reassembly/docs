@@ -1,18 +1,13 @@
-addEventListener("DOMContentLoaded", waitForCreatorToFinish);
-function waitForCreatorToFinish() {
-  let i = 0;
-  i = setInterval(() => {
-    if (generalInfo.name !== "") {
-      msg("creator ready: commencing construction");
-      clearInterval(i);
-      makePageIcons();
-      registerIcons();
-      if (document.title === "index") {
-        msg("making index page:");
-        constructNavbar();
-      }
-    } else msg("waiting for creator... ");
-  }, 45);
+async function creatorFinished() {
+  msg("creator ready: commencing construction");
+  makePageIcons();
+  registerIcons();
+  if (document.title === "index") {
+    msg("making index page:");
+    await constructNavbar();
+  }
+  msg("invoking creator:");
+  creator();
 }
 function makePageIcons() {
   msg("modifying page " + location.href);
@@ -49,12 +44,11 @@ async function constructNavbar() {
 }
 function registerIcons() {
   msg("registering defined icons");
-  for(let ico in icons){
-  msg(" registering "+ico);
+  for (let ico in icons) {
+    msg(" registering " + ico);
     let iconurl = icons[ico];
-    if(IconElement) IconElement.icons[ico] = iconurl;
-    else msg("  could not add it")
-    msg(IconElement.icons)
+    if (IconElement) IconElement.icons[ico] = iconurl;
+    else msg("  could not add it");
   }
 }
 function makeHeaderHTML(name) {
@@ -72,7 +66,9 @@ function makeCategoryHTML(name, items) {
 }
 function makeItemHtml(name, id) {
   return `
-          <a role="menuitem" tabindex="0" class="nav item" onclick='goto("${makeSafe(id)}")'>
+          <a role="menuitem" tabindex="0" class="nav item" onclick='goto("${makeSafe(
+            id
+          )}")'>
             <span>${process(name)}</span>
           </a>`;
 }
