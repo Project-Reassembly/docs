@@ -1,2 +1,3 @@
 ### ICONS DEFINITION FILE ###
-default = ../generator/default-icon.ico|The default wiki icon.
+default = ../generator/default-icon.ico|The default wiki icon.;
+integrate-logo = ../images/icon/integrate.png|Integrate;

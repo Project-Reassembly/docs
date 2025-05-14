@@ -1,9 +1,14 @@
 ### PAGE DEFINITION FILE ###
 ==home;
-  title = Blank Wiki;
-  :welcome\! = [b/This wiki is designed to give up-to-date information on ((project name here)).];
-  (!:warn) = [h:lightred/[img/default][i/Wiki is under construction, please be patient]];
+  title = Project: Documentation;
+  :welcome\! = [b/This wiki contains full* documentation for [-^https://github.com/Project-Reassembly/project-reassembly as Project: Reassembly].];
+  (!:warn) = [h:lightred/[i/Wiki is under construction, please be patient]];
   (:vhwarning) = [i/Version History will not show pre-release information.];
-  (desc) = This is a blank wiki.;
+  (desc) = Project: Reassembly is an (in development) open-world factory builder, with RPG elements and AI enemies.
+      [br]Compete with 3 organisations for a planet's natural resources, to satisfy your corporate overlords,
+       or use the technology you deveop to rise against them.
+      [br]Upgrade your robot with various body parts, weapons and accessories to fight off rivals, 
+      and develop the factory further.;
+  (asterisk) = [i/*Documentation may not be fully complete];
   versionHistory = null;
 #

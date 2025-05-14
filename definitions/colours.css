@@ -1,6 +1,6 @@
 /* Edit this to change the colour scheme (and font) of the site */
 :root {
-  --accent-colour: #00d5ff;
+  --accent-colour: rgb(255, 180, 51);
   --hover-bg-colour: #a9a9a9;
   --table-bg-colour: #cacaca;
   --table-item-colour: #ececec;
@@ -10,21 +10,22 @@
   --box-width: 500px;
   --header-size: 40px;
 
-  --sidebar-group-colour: #0065f3;
-  --sidebar-colour: #0053c7;
-  --faded-sidebar-colour: #a5bee3;
-  --less-faded-sidebar-colour: #91b1e1;
-  --warning-colour:  #5c0000;
+  --faded-sidebar-colour: rgb(232, 206, 160);
+  --less-faded-sidebar-colour: rgb(213, 177, 116);
+  --warning-colour:  #5c0e00;
   --warning-background-colour:  #e19191;
-  --faded-border-colour: #7587a2;
-  --faded-sidebar-hover-colour: #cbd5e4;
-  --sidebar-top-colour: #00429f;
-  --sidebar-item-colour: #0b67e8;
-  --sidebar-item-hover-colour: #3589ff;
-  --search-bar-colour: darkblue;
+  --faded-border-colour: rgb(188, 143, 65);
+  --faded-sidebar-hover-colour: rgb(255, 229, 183);
+  --sidebar-group-colour: rgb(232, 161, 40);
+  --sidebar-colour: rgb(210, 143, 28);
+  --sidebar-top-colour: rgb(155, 107, 25);
+  --sidebar-item-colour: rgb(207, 141, 27);
+  --sidebar-item-hover-colour: rgb(212, 152, 47);
+  --search-bar-colour: rgb(134, 90, 15);
   --search-bar-text-colour: white;
-  --header-colour: blue;
-  --lighter-header-colour: rgb(75, 75, 255);
+
+  --header-colour: rgb(198, 146, 55);
+  --lighter-header-colour: rgb(190, 151, 84);
 
   font-size: large;
 }
